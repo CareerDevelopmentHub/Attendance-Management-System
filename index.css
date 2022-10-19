@@ -108,7 +108,39 @@ img {
 
 button {
     color: white;
-    border-radius: 20px;
+    border-radius: 12px;
     background-color: rgb(4, 78, 38);
+    padding: 10px;
 }
 
+.button-cls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 250px;
+    width: 250px;
+}
+
+.btn-primary1 {
+    color: #fff;
+    background-color: rgb(41, 107, 72);
+    border-color: rgb(10, 73, 38);
+}
+
+.btn-primary1:hover {
+    color: #fff;
+    background-color: #031703;
+    border-color: #285e8e;
+}
+
+.btn-primary2 {
+    color: #fff;
+    background-color: rgb(41, 107, 72);
+    border-color: rgb(10, 73, 38);
+}
+
+.btn-primary2:hover {
+    color: #fff;
+    background-color: #031703;
+    border-color: #285e8e;
+}
