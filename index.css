@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     box-sizing: border-box;
 }
@@ -8,33 +8,30 @@ body {
 
 
 }
-.row {
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 76px;
+    padding: 10px 5%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.lg {
+    position: absolute;
+    left: 80px;
+    top: 12px;
+    
 }
   
 .navbar{
     position: absolute;
-    left: 700px;
+    left: 560px;
     top: 30px;
     
-}
-
-/* Create two equal columns that sits next to each other */
-.column1 ,.column2 {
-    flex: 50%;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-}
-.column1 {
-    text-align: center;
-    padding-top: 150px;
-}
-  
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
 }
 
 a {
@@ -42,42 +39,184 @@ a {
 padding: 8px;
 color: black;
 text-decoration: none;
-font-size: 20px;
+font-size: 18px;
+margin-right: 35px;
 }
 
-.dark-mode {
-    background-color: rgb(5, 57, 53);
-    color: rgb(98, 185, 114);
-
-}
+  
 .logo{
     position: absolute;
     left: 1400px;
-    top: 30px;
+    top: 20px;
   }
 
+  .dark-mode {
+      background-color: rgb(5, 57, 53);
+      color: rgb(244, 249, 245);
+  
+  }
 .dark-mode a {
-    color: rgb(36, 207, 17);
+    color: rgb(254, 255, 253);
 }
+
+/* ------------------------------------home------------------------ */
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.row h2{
+    text-align: center;
+    padding-top: 120px;
+    
+}
+.row p{
+    text-align: center;
+    padding-bottom: 25px;
+    
+  }
+
+  .Home-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+    padding-left: 120px;
+  }
+
+  .wrapper{
+    position: relative;
+    width: 400px;
+    height: 420px;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.wrapper.active .form-wrapper.sign-in{
+    transform: translateY(-450px);
+}
+
+.wrapper .form-wrapper.sign-up {
+    position: absolute;
+    top: 450px;
+    left: 0;
+}
+
+.wrapper.active .form-wrapper.sign-up{
+    transform: translateY(-450px);
+}
+
+form h2{
+    font-size: 30px;
+    text-align: center;
+
+}
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid;
+
+}
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-group input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -5px;
+}
+.remember{
+    margin: -5px 0 15px 5px;
+}
+.remember label{
+    font-size: 14px;
+}
+.remember label input{
+    accent-color: #0ef;
+
+}
+button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+.signup-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signup-link p a{
+    text-decoration: none;
+    font-weight: 500;
+    
+
+}
+.signup-link p a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.l-image{
+    margin-left: 60px;
+}
+
+/* /-------------------------------------------------------------- */
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+
 
 .footer {
     height: 50px;
     width: 100%;
     overflow: hidden;
     position: absolute;
-    bottom: 50px;
+    bottom: 5px;
     background-image: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
 
-}
-
-.lg {
-    position: absolute;
-    left: 70px;
-    top: 10px;
-    
-}
-img {
-    border-radius: 10px;
 }
 
 .Owner{
