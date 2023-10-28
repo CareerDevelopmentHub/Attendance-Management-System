@@ -4,7 +4,7 @@
 }
   
 body {
-     background-color: rgba(83,138,214,1);
+     background-color: rgb(56, 128, 230);
 
 
 }
@@ -282,4 +282,51 @@ button {
     color: #fff;
     background-color: #031703;
     border-color: #285e8e;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for small screens here */
+
+    .row {
+      flex-direction: column;
+    }
+
+    .navbar {
+      left: 0;
+      top: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      left: 85%;
+    }
+
+    .column1,
+    .column2 {
+      flex: 100%;
+    }
+
+    .button-cls {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .footer {
+      position: relative;
+      height: 70px;
+      display: flex;
+      bottom: 0;
+    }
+
+    .Owner{
+        text-align:left;
+        justify-content: center;
+    }
+    .sm {
+      text-align:left;
+      left: 0;
+      width: 100%;
+      padding-left: 5px;
+    }
 }
