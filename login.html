@@ -13,10 +13,13 @@
     </head>
 
     <body>
+
+        <!--Created a login and registration page, 2 in 1-->
         
         <header class="header">
             <nav class="navbar">
                 <a href="#">Home</a>
+                <a href="#">News</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
             </nav>
@@ -34,9 +37,9 @@
 
                 <h2 class="logo"><i class='bx bxs-graduation' ></i> &nbsp;Institution Name</h2>
                 <div class="text-sci">
-                    <h2>Welcome<br>
+                    <!-- <h2>Welcome<br>
                     <span>To the college website.</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, doloremque.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, doloremque.</p> -->
 
                     <div class="social-icons">
                         <a href="#"><i class='bx bxl-linkedin' ></i></a>
@@ -56,13 +59,13 @@
 
                         <div class="input-box">
                             <span class="icon"><i class='bx bxs-user' ></i></span>
-                            <input type="text" required>
+                            <input type="text" name="regno" required>
                             <label>Registration No.</label>
                         </div>
                         
                         <div class="input-box">
                             <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                            <input type="password" required>
+                            <input type="password" name="pswd" required>
                             <label>Password</label>
                         </div>
 
@@ -80,8 +83,51 @@
                     </form>
                 </div>
 
+                <div class="form-box register">
+                    <form action="#">
+                        <h2>Sign Up</h2>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user' ></i></span>
+                            <input type="text" required>
+                            <label>Registration No.</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-envelope' ></i></span>
+                            <input type="email" required>
+                            <label>Registered Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-phone'></i></span>
+                            <input type="tel" minlength="10" maxlength="10" name="phno" required>
+                            <label> Registered Phone Number</label>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                            <input type="password" name="pswd" required>
+                            <label>Password</label>
+                        </div>
+                        
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">I agree to the terms and conditions</label>
+                        </div>
+
+                        <button class="btn" type="submit">Sign Up</button>
+
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                        </div>
+                    
+                    </form>
+                </div>
+
             </div>
         </div>
+
+        <script src="login_script.js"></script>
 
     </body>
 
