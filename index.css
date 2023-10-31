@@ -4,10 +4,134 @@
 }
   
 body {
-     background-color: rgb(56, 128, 230);
-
-
+  font-family: "Lato", sans-serif;
 }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+:root {
+  --bg: rgb(137, 144, 158);
+  --bg-input: #141419;
+}
+
+
+:root{
+  --bg:linear-gradient(to  left, #363690 41%, #3ec7f5 100%);
+ 
+  --bg-input: #e1e1ed;
+}
+
+
+/* light mode edited */
+
+.light-mode {
+  --bg: linear-gradient(to left, #2a2d30, #080a0c);
+  --bg-input: #fcf9f9;
+}
+
+body {
+  background: var(--bg);
+  color: var(--color-text);
+  /*font-weight: 500;
+  display: flex;*/
+}
+
+.switch {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.switch+label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.switch+label {
+  padding: 2px;
+  width: 52px;
+  height: 27px;
+  background-color: var(--color-border), rgba(23, 21, 21, 0.3);
+  border-radius: 100px;
+}
+
+.switch+label:before,
+.switch+label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+
+.switch+label:before {
+  right: 1px;
+  background-color: var(--bg-input);
+  border-radius: 60px;
+  transition: all 0.4s;
+}
+
+.switch+label:after {
+  width: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+.switch:checked+label:before {
+  background-color: #f3eff5;
+}
+
+.switch:checked+label:after {
+  transform: translateX(30px);
+}
+
 .row {
     display: flex;
 }
@@ -45,20 +169,7 @@ text-decoration: none;
 font-size: 20px;
 }
 
-.dark-mode {
-    background-color: rgb(5, 57, 53);
-    color: rgb(98, 185, 114);
 
-}
-.logo{
-    position: absolute;
-    left: 1400px;
-    top: 30px;
-  }
-
-.dark-mode a {
-    color: rgb(36, 207, 17);
-}
 
 .footer {
     height: 50px;
@@ -191,3 +302,4 @@ button {
       padding-left: 5px;
     }
   }
+
